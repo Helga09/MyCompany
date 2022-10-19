@@ -18,9 +18,7 @@
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Views\" />
-    <Folder Include="Domain\" />
     <Folder Include="Models\ViewComponents\" />
-    <Folder Include="Servise\" />
     <Folder Include="wwwroot\css\" />
     <Folder Include="wwwroot\images\" />
     <Folder Include="wwwroot\sass\" />
