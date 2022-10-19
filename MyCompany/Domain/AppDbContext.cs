@@ -28,7 +28,6 @@ namespace MyCompany.Domain
                 EmailConfirmed = true,
                 PasswordHash = new PasswordHasher<IdentityUser>().HashPassword(null, "superpassword"),
                 SecurityStamp = string.Empty
-
             });
 
 
@@ -37,11 +36,7 @@ namespace MyCompany.Domain
                 Id = "8af10569-b018-4fe7-a380-7d6a14c70b74",
                 Name = "admin",
                 NormalizedName = "ADMIN"
-
             });
-
-
-
 
             modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
             {

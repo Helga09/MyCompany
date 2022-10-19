@@ -10,7 +10,7 @@ using MyCompany.Domain;
 namespace MyCompany.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221019165911__initial")]
+    [Migration("20221019175055__initial")]
     partial class _initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -46,6 +46,15 @@ namespace MyCompany.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "8af10569-b018-4fe7-a380-7d6a14c70b74",
+                            ConcurrencyStamp = "62616f6b-187e-4636-b408-b04ddd6741be",
+                            Name = "admin",
+                            NormalizedName = "ADMIN"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -141,13 +150,13 @@ namespace MyCompany.Migrations
                         {
                             Id = "3b62472e-4f66-49fa-a20f-e7685b9565d8",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "bc6aac0c-ae8d-4260-a6b9-e2f2c82c14b3",
+                            ConcurrencyStamp = "74c9d006-141b-4600-bcf4-8315ec9559f9",
                             Email = "my@email.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "MY@EMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEJV+fLucXGqdwYXWdoSec4xLHWwbUxJHTnsQdOQKfZJHAphRq2kVKL/ikmmo5MUqWw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEN+fxZrvImfErc2V54d46BPy1ns5sa1KWGIbcXYTCc4+B4y5iBuFLKCVHWnoFhDydQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -321,7 +330,7 @@ namespace MyCompany.Migrations
                         {
                             Id = new Guid("63dc8fa6-07ae-4391-8916-e057f71239ce"),
                             CodeWord = "PageIndex",
-                            DateAdded = new DateTime(2022, 10, 19, 16, 59, 10, 878, DateTimeKind.Utc).AddTicks(6447),
+                            DateAdded = new DateTime(2022, 10, 19, 17, 50, 55, 286, DateTimeKind.Utc).AddTicks(6504),
                             Text = "Зміст заповнюється адміністратором",
                             Title = "Головна"
                         },
@@ -329,7 +338,7 @@ namespace MyCompany.Migrations
                         {
                             Id = new Guid("70bf165a-700a-4156-91c0-e83fce0a277f"),
                             CodeWord = "PageServices",
-                            DateAdded = new DateTime(2022, 10, 19, 16, 59, 10, 878, DateTimeKind.Utc).AddTicks(7947),
+                            DateAdded = new DateTime(2022, 10, 19, 17, 50, 55, 286, DateTimeKind.Utc).AddTicks(7531),
                             Text = "Зміст заповнюється адміністратором",
                             Title = "Наші послуги"
                         },
@@ -337,7 +346,7 @@ namespace MyCompany.Migrations
                         {
                             Id = new Guid("4aa76a4c-c59d-409a-84c1-06e6487a137a"),
                             CodeWord = "PageContacts",
-                            DateAdded = new DateTime(2022, 10, 19, 16, 59, 10, 878, DateTimeKind.Utc).AddTicks(8011),
+                            DateAdded = new DateTime(2022, 10, 19, 17, 50, 55, 286, DateTimeKind.Utc).AddTicks(7576),
                             Text = "Зміст заповнюється адміністратором",
                             Title = "Контакти"
                         });

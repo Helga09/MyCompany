@@ -192,18 +192,23 @@ namespace MyCompany.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "AspNetRoles",
+                columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
+                values: new object[] { "8af10569-b018-4fe7-a380-7d6a14c70b74", "62616f6b-187e-4636-b408-b04ddd6741be", "admin", "ADMIN" });
+
+            migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "3b62472e-4f66-49fa-a20f-e7685b9565d8", 0, "bc6aac0c-ae8d-4260-a6b9-e2f2c82c14b3", "my@email.com", true, false, null, "MY@EMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAEJV+fLucXGqdwYXWdoSec4xLHWwbUxJHTnsQdOQKfZJHAphRq2kVKL/ikmmo5MUqWw==", null, false, "", false, "admin" });
+                values: new object[] { "3b62472e-4f66-49fa-a20f-e7685b9565d8", 0, "74c9d006-141b-4600-bcf4-8315ec9559f9", "my@email.com", true, false, null, "MY@EMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAEN+fxZrvImfErc2V54d46BPy1ns5sa1KWGIbcXYTCc4+B4y5iBuFLKCVHWnoFhDydQ==", null, false, "", false, "admin" });
 
             migrationBuilder.InsertData(
                 table: "TextFields",
                 columns: new[] { "Id", "CodeWord", "DateAdded", "MetaDescription", "MetaKeywords", "MetaTitle", "Subtitle", "Text", "Title", "TitleImagePath" },
                 values: new object[,]
                 {
-                    { new Guid("63dc8fa6-07ae-4391-8916-e057f71239ce"), "PageIndex", new DateTime(2022, 10, 19, 16, 59, 10, 878, DateTimeKind.Utc).AddTicks(6447), null, null, null, null, "Зміст заповнюється адміністратором", "Головна", null },
-                    { new Guid("70bf165a-700a-4156-91c0-e83fce0a277f"), "PageServices", new DateTime(2022, 10, 19, 16, 59, 10, 878, DateTimeKind.Utc).AddTicks(7947), null, null, null, null, "Зміст заповнюється адміністратором", "Наші послуги", null },
-                    { new Guid("4aa76a4c-c59d-409a-84c1-06e6487a137a"), "PageContacts", new DateTime(2022, 10, 19, 16, 59, 10, 878, DateTimeKind.Utc).AddTicks(8011), null, null, null, null, "Зміст заповнюється адміністратором", "Контакти", null }
+                    { new Guid("63dc8fa6-07ae-4391-8916-e057f71239ce"), "PageIndex", new DateTime(2022, 10, 19, 17, 50, 55, 286, DateTimeKind.Utc).AddTicks(6504), null, null, null, null, "Зміст заповнюється адміністратором", "Головна", null },
+                    { new Guid("70bf165a-700a-4156-91c0-e83fce0a277f"), "PageServices", new DateTime(2022, 10, 19, 17, 50, 55, 286, DateTimeKind.Utc).AddTicks(7531), null, null, null, null, "Зміст заповнюється адміністратором", "Наші послуги", null },
+                    { new Guid("4aa76a4c-c59d-409a-84c1-06e6487a137a"), "PageContacts", new DateTime(2022, 10, 19, 17, 50, 55, 286, DateTimeKind.Utc).AddTicks(7576), null, null, null, null, "Зміст заповнюється адміністратором", "Контакти", null }
                 });
 
             migrationBuilder.InsertData(
