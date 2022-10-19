@@ -18,17 +18,17 @@ namespace MyCompany.Domain.Repositories.EntityFramework
 
         public IQueryable<TextField> GetTextFields()
         {
-            return context.TextField;
+            return context.TextFields;
         }
 
         public TextField GetTextFieldById(Guid id)
         {
-            return context.TextField.FirstOrDefault(x => x.Id == id);
+            return context.TextFields.FirstOrDefault(x => x.Id == id);
         }
 
         public TextField GetTextFieldByCodeWords(string codeWord)
         {
-            return context.TextField.FirstOrDefault(x => x.CodeWord == codeWord);
+            return context.TextFields.FirstOrDefault(x => x.CodeWord == codeWord);
         }
 
         public void SaveTextField(TextField entity)
@@ -42,7 +42,7 @@ namespace MyCompany.Domain.Repositories.EntityFramework
 
         public void DeleteTextField(Guid id)
         {
-            context.TextField.Remove(new TextField() { Id = id });
+            context.TextFields.Remove(new TextField() { Id = id });
             context.SaveChanges();
         }
     }

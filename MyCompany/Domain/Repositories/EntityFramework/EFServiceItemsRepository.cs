@@ -18,12 +18,12 @@ namespace MyCompany.Domain.Repositories.EntityFramework
        
         public ServiceItem GetServiceItemById(Guid id)
         {
-            return context.ServiceItem.FirstOrDefault(x => x.Id == id);
+            return context.ServiceItems.FirstOrDefault(x => x.Id == id);
         }
 
         public IQueryable<ServiceItem> GetServiceItems()
         {
-            return context.ServiceItem;
+            return context.ServiceItems;
            
         }
 
@@ -37,7 +37,7 @@ namespace MyCompany.Domain.Repositories.EntityFramework
         }
         public void DeleteServiceItem(Guid id)
         {
-            context.ServiceItem.Remove(new ServiceItem() { Id = id });
+            context.ServiceItems.Remove(new ServiceItem() { Id = id });
             context.SaveChanges();
         }
 

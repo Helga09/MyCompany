@@ -30,19 +30,19 @@ namespace MyCompany
             services.AddTransient<IServiceItemsRepository, EFServiceItemsRepository>();
             services.AddTransient<DataManager>();
 
-            //services.AddDbContext<AppDbContext>(x => x.UseSqlServer(Config.ConnectionString));
+            services.AddDbContext<AppDbContext>(x => x.UseSqlServer(Config.ConnectionString));
 
-         
 
-        services.AddIdentity<IdentityUser, IdentityRole>(opts =>
-            {
-                opts.User.RequireUniqueEmail = true;
-                opts.Password.RequiredLength = 6;
-                opts.Password.RequireNonAlphanumeric = false;
-                opts.Password.RequireLowercase = false;
-                opts.Password.RequireUppercase = false;
-                opts.Password.RequireDigit = false;
-            }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+
+            services.AddIdentity<IdentityUser, IdentityRole>(opts =>
+                {
+                    opts.User.RequireUniqueEmail = true;
+                    opts.Password.RequiredLength = 6;
+                    opts.Password.RequireNonAlphanumeric = false;
+                    opts.Password.RequireLowercase = false;
+                    opts.Password.RequireUppercase = false;
+                    opts.Password.RequireDigit = false;
+                }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 
             services.ConfigureApplicationCookie(options =>
            {
@@ -64,8 +64,9 @@ namespace MyCompany
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseRouting();
             app.UseStaticFiles();
+            app.UseRouting();
+
 
             app.UseCookiePolicy();
             app.UseAuthentication();

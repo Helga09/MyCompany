@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyCompany.Domain.Entities
 {
-    public class EntityBase
+    public abstract class EntityBase
     {
         protected EntityBase() => DateAdded = DateTime.UtcNow;
         [Required]
@@ -24,13 +24,13 @@ namespace MyCompany.Domain.Entities
         public virtual string TitleImagePath { get; set; }
 
         [Display(Name = "SEO метатег Title")]
-        public virtual string MetaTitle { get; set; }
+        public  string MetaTitle { get; set; }
 
         [Display(Name = "SEO метатег Description")]
-        public virtual string MetaDescription { get; set; }
+        public  string MetaDescription { get; set; }
 
         [Display(Name = "SEO метатег Keywords")]
-        public virtual string MetaKeywords { get; set; }
+        public string MetaKeywords { get; set; }
 
         [DataType(DataType.Time)]
         public DateTime DateAdded { get; set; }
