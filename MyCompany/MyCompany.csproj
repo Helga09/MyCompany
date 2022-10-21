@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ServiceItemsController.cs" />
     <Compile Include="Areas\Admin\Controllers\TextFieldsController.cs" />
   </ItemGroup>
 
