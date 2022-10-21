@@ -324,3 +324,8 @@ C:\Users\olhav\OneDrive\Рабочий стол\C#\Нова папка\MyCompany
 C:\Users\olhav\OneDrive\Рабочий стол\C#\Нова папка\MyCompany\MyCompany\obj\Debug\netcoreapp3.1\MyCompany.dll
 C:\Users\olhav\OneDrive\Рабочий стол\C#\Нова папка\MyCompany\MyCompany\obj\Debug\netcoreapp3.1\MyCompany.pdb
 C:\Users\olhav\OneDrive\Рабочий стол\C#\Нова папка\MyCompany\MyCompany\obj\Debug\netcoreapp3.1\MyCompany.genruntimeconfig.cache
+C:\Users\olhav\OneDrive\Рабочий стол\C#\Нова папка\MyCompany\MyCompany\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\olhav\OneDrive\Рабочий стол\C#\Нова папка\MyCompany\MyCompany\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\Index.cshtml.g.cs
+C:\Users\olhav\OneDrive\Рабочий стол\C#\Нова папка\MyCompany\MyCompany\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\TextFields\Edit.cshtml.g.cs
+C:\Users\olhav\OneDrive\Рабочий стол\C#\Нова папка\MyCompany\MyCompany\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\olhav\OneDrive\Рабочий стол\C#\Нова папка\MyCompany\MyCompany\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs

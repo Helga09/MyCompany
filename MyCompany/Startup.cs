@@ -53,7 +53,16 @@ namespace MyCompany
                options.SlidingExpiration = true;
            });
 
-            services.AddControllersWithViews()
+
+            services.AddAuthorization(x =>
+            {
+                x.AddPolicy("AdminArea", policy => { policy.RequireRole("admin"); });
+            });
+
+            services.AddControllersWithViews( x=>
+                {
+                    x.Conventions.Add(new AdminAreaAutorization("Admin", "AdminArea"));
+                })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_3_0).AddSessionStateTempDataProvider();
         }
 
@@ -61,12 +70,11 @@ namespace MyCompany
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
-            {
                 app.UseDeveloperExceptionPage();
-            }
+            
             app.UseStaticFiles();
             app.UseRouting();
-
+           
 
             app.UseCookiePolicy();
             app.UseAuthentication();
