@@ -14,6 +14,7 @@ namespace MyCompany.Domain
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
         public DbSet<TextField> TextFields { get; set; }
         public DbSet<ServiceItem> ServiceItems { get; set; }
+        public DbSet<News> News { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -63,6 +64,13 @@ namespace MyCompany.Domain
                 Id = new Guid("4aa76a4c-c59d-409a-84c1-06e6487a137a"),
                 CodeWord = "PageContacts",
                 Title = "Контакти"
+            });
+
+            modelBuilder.Entity<TextField>().HasData(new TextField
+            {
+                Id = new Guid("5ba76a45-c59d-409a-84c1-06e6487a137a"),
+                CodeWord = "PageNews",
+                Title = "Новини"
             });
 
 

@@ -49,7 +49,7 @@ namespace MyCompany.Migrations
                         new
                         {
                             Id = "8af10569-b018-4fe7-a380-7d6a14c70b74",
-                            ConcurrencyStamp = "62616f6b-187e-4636-b408-b04ddd6741be",
+                            ConcurrencyStamp = "6b8b0226-f684-4499-aae6-448b5b5ebf8c",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         });
@@ -148,13 +148,13 @@ namespace MyCompany.Migrations
                         {
                             Id = "3b62472e-4f66-49fa-a20f-e7685b9565d8",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "74c9d006-141b-4600-bcf4-8315ec9559f9",
+                            ConcurrencyStamp = "890e94dc-6846-46dd-83b3-09f626f79e66",
                             Email = "my@email.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "MY@EMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEN+fxZrvImfErc2V54d46BPy1ns5sa1KWGIbcXYTCc4+B4y5iBuFLKCVHWnoFhDydQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEO1AvxttobHz7PAi8Pkz6XCv/Rwep6n3QAuAkibLC6aWfaeS3oRSP6gl58uR9gUr7A==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -249,6 +249,42 @@ namespace MyCompany.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("MyCompany.Domain.Entities.News", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("DateAdded")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("MetaDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MetaKeywords")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MetaTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Subtitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Text")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TitleImagePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("News");
+                });
+
             modelBuilder.Entity("MyCompany.Domain.Entities.ServiceItem", b =>
                 {
                     b.Property<Guid>("Id")
@@ -328,7 +364,7 @@ namespace MyCompany.Migrations
                         {
                             Id = new Guid("63dc8fa6-07ae-4391-8916-e057f71239ce"),
                             CodeWord = "PageIndex",
-                            DateAdded = new DateTime(2022, 10, 19, 17, 50, 55, 286, DateTimeKind.Utc).AddTicks(6504),
+                            DateAdded = new DateTime(2022, 10, 24, 9, 48, 24, 986, DateTimeKind.Utc).AddTicks(3319),
                             Text = "Зміст заповнюється адміністратором",
                             Title = "Головна"
                         },
@@ -336,7 +372,7 @@ namespace MyCompany.Migrations
                         {
                             Id = new Guid("70bf165a-700a-4156-91c0-e83fce0a277f"),
                             CodeWord = "PageServices",
-                            DateAdded = new DateTime(2022, 10, 19, 17, 50, 55, 286, DateTimeKind.Utc).AddTicks(7531),
+                            DateAdded = new DateTime(2022, 10, 24, 9, 48, 24, 986, DateTimeKind.Utc).AddTicks(4371),
                             Text = "Зміст заповнюється адміністратором",
                             Title = "Наші послуги"
                         },
@@ -344,9 +380,17 @@ namespace MyCompany.Migrations
                         {
                             Id = new Guid("4aa76a4c-c59d-409a-84c1-06e6487a137a"),
                             CodeWord = "PageContacts",
-                            DateAdded = new DateTime(2022, 10, 19, 17, 50, 55, 286, DateTimeKind.Utc).AddTicks(7576),
+                            DateAdded = new DateTime(2022, 10, 24, 9, 48, 24, 986, DateTimeKind.Utc).AddTicks(4422),
                             Text = "Зміст заповнюється адміністратором",
                             Title = "Контакти"
+                        },
+                        new
+                        {
+                            Id = new Guid("5ba76a45-c59d-409a-84c1-06e6487a137a"),
+                            CodeWord = "PageNews",
+                            DateAdded = new DateTime(2022, 10, 24, 9, 48, 24, 986, DateTimeKind.Utc).AddTicks(4440),
+                            Text = "Зміст заповнюється адміністратором",
+                            Title = "Новини"
                         });
                 });
 

@@ -7,13 +7,15 @@ namespace MyCompany.Domain
 {
     public class DataManager
     {
-        public ITextFieldsRepository TextFields  { get; set; }
+        public ITextFieldsRepository TextFields { get; set; }
         public IServiceItemsRepository ServiceItems { get; set; }
+        public INewsRepository News { get; set; }
 
-        public DataManager(ITextFieldsRepository textFieldsRepository, IServiceItemsRepository serviceItemsRepository)
+        public DataManager(ITextFieldsRepository textFieldsRepository, IServiceItemsRepository serviceItemsRepository, INewsRepository newsRepository)
         {
             TextFields = textFieldsRepository;
             ServiceItems = serviceItemsRepository;
+            News = newsRepository;
         }
     }
 }

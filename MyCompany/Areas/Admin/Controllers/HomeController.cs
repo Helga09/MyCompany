@@ -2,6 +2,7 @@
 using MyCompany.Domain;
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -18,7 +19,11 @@ namespace MyCompany.Areas.Admin.Controllers
         }
        public IActionResult Index()
         {
-            return View(dataManager.ServiceItems.GetServiceItems());
+            dynamic mymodel = new ExpandoObject();
+            mymodel.News = dataManager.News.GetNews();
+            mymodel.ServiceItems = dataManager.ServiceItems.GetServiceItems();
+            return View(mymodel);
+            //return View(dataManager.ServiceItems.GetServiceItems());
         }
     }
 }
