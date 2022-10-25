@@ -4,57 +4,79 @@
     ViewBag.Title = strTitle;
 }
 <div>
-  
+
     <h2>@strTitle</h2>
     <div>
         <h3>Наші послуги</h3>
         <div class="div-box">
             <a asp-area="Admin" asp-controller="ServiceItems" asp-action="Edit" asp-route-id="">Додати послугу</a>
         </div>
-        
-            <div>
-                @foreach (ServiceItem entity in Model.ServiceItems)
-                {
-                    <div>
-                        <a asp-area="Admin" asp-controller="ServiceItems" asp-action="Edit" asp-route-id="@entity.Id">редагувати</a>
-                        <form style="display: inline-block;" id="form-@entity.Id" asp-area="Admin" asp-controller="ServiceItems" asp-action="Delete" method="post">
-                            <input type="hidden" name="id" value="@entity.Id">
-                            <a href="#" onclick="document.getElementById('form-@entity.Id').submit();">видалити</a>
-                        </form>
 
-                        <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="@entity.Id">
-                            @($"{entity.Title}")
-                        </a>
-                    </div>
-                }
-            </div>
-        
+        <div>
+            @foreach (ServiceItem entity in Model.ServiceItems)
+            {
+                <div>
+                    <a asp-area="Admin" asp-controller="ServiceItems" asp-action="Edit" asp-route-id="@entity.Id">редагувати</a>
+                    <form style="display: inline-block;" id="form-@entity.Id" asp-area="Admin" asp-controller="ServiceItems" asp-action="Delete" method="post">
+                        <input type="hidden" name="id" value="@entity.Id">
+                        <a href="#" onclick="document.getElementById('form-@entity.Id').submit();">видалити</a>
+                    </form>
+
+                    <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="@entity.Id">
+                        @($"{entity.Title}")
+                    </a>
+                </div>
+            }
+        </div>
+
     </div>
 
- 
+
     <div>
         <h3>Новини</h3>
         <div class="div-box">
             <a asp-area="Admin" asp-controller="News" asp-action="Edit" asp-route-id="">Додати новину</a>
         </div>
-       
-            <div>
-                @foreach (News entity in Model.News)
-                {
-                    <div>
-                        <a asp-area="Admin" asp-controller="News" asp-action="Edit" asp-route-id="@entity.Id">редагувати</a>
-                        <form style="display: inline-block;" id="form-@entity.Id" asp-area="Admin" asp-controller="News" asp-action="Delete" method="post">
-                            <input type="hidden" name="id" value="@entity.Id">
-                            <a href="#" onclick="document.getElementById('form-@entity.Id').submit();">видалити</a>
-                        </form>
 
-                        <a asp-area="" asp-controller="News" asp-action="Index" asp-route-id="@entity.Id">
-                            @($"{entity.Title}")
-                        </a>
-                    </div>
-                }
-            </div>
-           </div>
+        <div>
+            @foreach (News entity in Model.News)
+            {
+                <div>
+                    <a asp-area="Admin" asp-controller="News" asp-action="Edit" asp-route-id="@entity.Id">редагувати</a>
+                    <form style="display: inline-block;" id="form-@entity.Id" asp-area="Admin" asp-controller="News" asp-action="Delete" method="post">
+                        <input type="hidden" name="id" value="@entity.Id">
+                        <a href="#" onclick="document.getElementById('form-@entity.Id').submit();">видалити</a>
+                    </form>
+
+                    <a asp-area="" asp-controller="News" asp-action="Index" asp-route-id="@entity.Id">
+                        @($"{entity.Title}")
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+
+
+    <div>
+        <h3>Повідомлення</h3>
+        <div>
+            @foreach (Messages entity in Model.Messages)
+            {
+                <div>
+                    <form style="display: inline-block;" id="form-@entity.Id" asp-area="" asp-controller="Messages" asp-action="Delete" method="post">
+                        <input type="hidden" name="id" value="@entity.Id">
+                        <p style="line-height: 0;  margin-bottom:10px;">  </p>
+                            @entity.textMessage
+                            <br>
+                            <a href="#" onclick="document.getElementById('form-@entity.Id').submit();">видалити</a>
+                      
+                    </form>
+
+                </div>
+            }
+        </div>
+    </div>
+
 
     <div class="div-box">
         <h3>Редагувати сторінки сайту</h3>

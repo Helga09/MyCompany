@@ -22,6 +22,7 @@ namespace MyCompany.Areas.Admin.Controllers
             dynamic mymodel = new ExpandoObject();
             mymodel.News = dataManager.News.GetNews();
             mymodel.ServiceItems = dataManager.ServiceItems.GetServiceItems();
+            mymodel.Messages=dataManager.Messages.GetMessages();
             return View(mymodel);
             //return View(dataManager.ServiceItems.GetServiceItems());
         }

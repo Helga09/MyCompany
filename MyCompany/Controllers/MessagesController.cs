@@ -37,10 +37,16 @@ namespace MyCompany.Controllers
             {            
                 dataManager.Messages.SaveMessages(model);
                 return View("Success");
-
-                //return RedirectToAction(nameof(HomeController.Index), nameof(HomeController).CutController());
+ 
             }
             return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Guid id)
+        {
+            dataManager.Messages.DeleteMessages(id);
+            return Redirect("/admin");
         }
     }
 }
