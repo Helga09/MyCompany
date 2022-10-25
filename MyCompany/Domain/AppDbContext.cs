@@ -15,6 +15,7 @@ namespace MyCompany.Domain
         public DbSet<TextField> TextFields { get; set; }
         public DbSet<ServiceItem> ServiceItems { get; set; }
         public DbSet<News> News { get; set; }
+        public DbSet<Messages> Messages { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -73,6 +74,12 @@ namespace MyCompany.Domain
                 Title = "Новини"
             });
 
+            modelBuilder.Entity<TextField>().HasData(new TextField
+            {
+                Id = new Guid("48a76a45-c59d-4095-84a1-06e6487a137a"),
+                CodeWord = "PageMessages",
+                Title = "Написати адміністратору"
+            });
 
         }
     }

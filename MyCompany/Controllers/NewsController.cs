@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using MyCompany.Domain;
 
+
 namespace MyCompany.Controllers
 {
     public class NewsController : Controller

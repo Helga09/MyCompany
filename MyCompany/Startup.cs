@@ -28,6 +28,7 @@ namespace MyCompany
 
             services.AddTransient<ITextFieldsRepository, EFTextFieldsRepository>();
             services.AddTransient<IServiceItemsRepository, EFServiceItemsRepository>();
+            services.AddTransient<IMessagesRepository, EFMessagesRepository>();
             services.AddTransient<INewsRepository, EFNewsRepository>();
             services.AddTransient<DataManager>();
 

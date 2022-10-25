@@ -337,3 +337,5 @@ C:\Users\olhav\OneDrive\Рабочий стол\C#\Нова папка\MyCompany
 C:\Users\olhav\OneDrive\Рабочий стол\C#\Нова папка\MyCompany\MyCompany\obj\Debug\netcoreapp3.1\Razor\Views\News\Index.cshtml.g.cs
 C:\Users\olhav\OneDrive\Рабочий стол\C#\Нова папка\MyCompany\MyCompany\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\News\Edit.cshtml.g.cs
 C:\Users\olhav\OneDrive\Рабочий стол\C#\Нова папка\MyCompany\MyCompany\obj\Debug\netcoreapp3.1\Razor\Views\News\Show.cshtml.g.cs
+C:\Users\olhav\OneDrive\Рабочий стол\C#\Нова папка\MyCompany\MyCompany\obj\Debug\netcoreapp3.1\Razor\Views\Messages\Index.cshtml.g.cs
+C:\Users\olhav\OneDrive\Рабочий стол\C#\Нова папка\MyCompany\MyCompany\obj\Debug\netcoreapp3.1\Razor\Views\Messages\Success.cshtml.g.cs

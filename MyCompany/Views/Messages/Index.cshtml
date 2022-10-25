@@ -1,0 +1,18 @@
+﻿@model Messages
+<div>
+
+    <h2>Напишіть адміністратору</h2>
+
+    <form asp-area="" asp-controller="Messages" asp-action="Index" method="post">
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="DateAdded" />
+        <div asp-validation-summary="All"></div>
+        <div class="div-box">
+            <label asp-for="textMessage">Залиште коментар:</label>
+            <textarea asp-for="textMessage"></textarea>
+        </div>
+        <input type="submit" value="Надіслати" />
+    </form>
+
+</div>
+
