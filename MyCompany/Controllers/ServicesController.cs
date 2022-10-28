@@ -18,7 +18,7 @@ namespace MyCompany.Controllers
         {
             if (id != default)
             {
-                return View("Show",dataManager.ServiceItems.GetServiceItemById(id));
+                return View("Show", dataManager.ServiceItems.GetServiceItemById(id));
             }
             ViewBag.TextField = dataManager.TextFields.GetTextFieldByCodeWords("PageServices");
             return View(dataManager.ServiceItems.GetServiceItems());

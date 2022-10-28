@@ -7,7 +7,9 @@ namespace MyCompany.Domain.Repositories.Abstract
 {
     public interface INewsRepository
     {
-        IQueryable<News> GetNews();
+        IQueryable<News> GetNotPublishNews();
+        IQueryable<News> GetPublishNews();
+        IQueryable<News> GetAllNews();
         News GetNewsById(Guid id);
         void SaveNews(News entity);
         void DeleteNews(Guid id);

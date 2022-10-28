@@ -15,7 +15,7 @@ namespace MyCompany.Domain.Repositories.EntityFramework
         {
             this.context = context;
         }
-       
+
         public ServiceItem GetServiceItemById(Guid id)
         {
             return context.ServiceItems.FirstOrDefault(x => x.Id == id);
@@ -24,7 +24,7 @@ namespace MyCompany.Domain.Repositories.EntityFramework
         public IQueryable<ServiceItem> GetServiceItems()
         {
             return context.ServiceItems;
-           
+
         }
 
         public void SaveServiceItem(ServiceItem entity)

@@ -31,7 +31,7 @@ namespace MyCompany.Areas.Admin.Controllers
                 dataManager.TextFields.SaveTextField(model);
                 return RedirectToAction(nameof(HomeController.Index), nameof(HomeController).CutController());
             }
-           
+
             return View(model);
         }
     }

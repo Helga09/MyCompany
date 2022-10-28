@@ -1,5 +1,5 @@
 ﻿@model TextField
-@{ 
+@{
     string strTitle = "Редагувати запис";
     ViewBag.Title = strTitle;
 }
@@ -40,7 +40,9 @@
                 <input asp-for="MetaKeywords">
                 <span asp-validation-for="MetaKeywords"></span>
             </div>
-            <input type="submit" value="Зберігти">
+            <button class="btn3">
+                <input style="background:none;border:none;" type="submit" value="Зберігти">
+            </button>
         </form>
     </div>
 </div>

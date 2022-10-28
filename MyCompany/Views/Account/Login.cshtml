@@ -2,8 +2,7 @@
 <div>
     <h1>Вхід в особистий кабінет</h1>
     <div class="div-box">
-        <form asp-area="" asp-controller="Account" asp-action="Login"  asp-rote-returnUrl="@ViewBag.returnUrl">
-            <div asp-validation-summary="All"></div>
+        <form asp-area="" asp-controller="Account" asp-action="Login" asp-rote-returnUrl="@ViewBag.returnUrl">
             <div>
                 <label asp-for="UserName"></label>
                 <input asp-for="UserName" />

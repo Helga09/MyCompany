@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyCompany.Domain;
 
 namespace MyCompany.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221025171152_fourth")]
+    partial class fourth
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,7 +51,7 @@ namespace MyCompany.Migrations
                         new
                         {
                             Id = "8af10569-b018-4fe7-a380-7d6a14c70b74",
-                            ConcurrencyStamp = "5c4d6b5c-cd0e-4da9-8e57-9085aa2d57c5",
+                            ConcurrencyStamp = "226ea9de-61ed-40d4-8712-d8c5313fec6f",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         });
@@ -148,13 +150,13 @@ namespace MyCompany.Migrations
                         {
                             Id = "3b62472e-4f66-49fa-a20f-e7685b9565d8",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "254145bc-b60d-4058-8dd3-a50c25849684",
+                            ConcurrencyStamp = "4c94874a-c303-4a4b-8cea-34923270c52d",
                             Email = "my@email.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "MY@EMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAELIiquaVbVmuzLbtktlEJoXOLX50PFJB/f/cVjfMiXFWFZ4hHABqLy1eELK/nPNfSQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGRYV5yOGr/PNKIBdD9y5f6FbU4VngkClbao4d28L30SNe9DWnb/SQBGMcC1IfxIdQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -276,10 +278,6 @@ namespace MyCompany.Migrations
                     b.Property<DateTime>("DateAdded")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("MetaDescription")
                         .HasColumnType("nvarchar(max)");
 
@@ -288,9 +286,6 @@ namespace MyCompany.Migrations
 
                     b.Property<string>("MetaTitle")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Publish")
-                        .HasColumnType("bit");
 
                     b.Property<string>("Subtitle")
                         .HasColumnType("nvarchar(max)");
@@ -389,7 +384,7 @@ namespace MyCompany.Migrations
                         {
                             Id = new Guid("63dc8fa6-07ae-4391-8916-e057f71239ce"),
                             CodeWord = "PageIndex",
-                            DateAdded = new DateTime(2022, 10, 26, 9, 57, 6, 415, DateTimeKind.Utc).AddTicks(6137),
+                            DateAdded = new DateTime(2022, 10, 25, 17, 11, 52, 431, DateTimeKind.Utc).AddTicks(4163),
                             Text = "Зміст заповнюється адміністратором",
                             Title = "Головна"
                         },
@@ -397,7 +392,7 @@ namespace MyCompany.Migrations
                         {
                             Id = new Guid("70bf165a-700a-4156-91c0-e83fce0a277f"),
                             CodeWord = "PageServices",
-                            DateAdded = new DateTime(2022, 10, 26, 9, 57, 6, 415, DateTimeKind.Utc).AddTicks(7156),
+                            DateAdded = new DateTime(2022, 10, 25, 17, 11, 52, 431, DateTimeKind.Utc).AddTicks(5218),
                             Text = "Зміст заповнюється адміністратором",
                             Title = "Наші послуги"
                         },
@@ -405,7 +400,7 @@ namespace MyCompany.Migrations
                         {
                             Id = new Guid("4aa76a4c-c59d-409a-84c1-06e6487a137a"),
                             CodeWord = "PageContacts",
-                            DateAdded = new DateTime(2022, 10, 26, 9, 57, 6, 415, DateTimeKind.Utc).AddTicks(7200),
+                            DateAdded = new DateTime(2022, 10, 25, 17, 11, 52, 431, DateTimeKind.Utc).AddTicks(5262),
                             Text = "Зміст заповнюється адміністратором",
                             Title = "Контакти"
                         },
@@ -413,7 +408,7 @@ namespace MyCompany.Migrations
                         {
                             Id = new Guid("5ba76a45-c59d-409a-84c1-06e6487a137a"),
                             CodeWord = "PageNews",
-                            DateAdded = new DateTime(2022, 10, 26, 9, 57, 6, 415, DateTimeKind.Utc).AddTicks(7218),
+                            DateAdded = new DateTime(2022, 10, 25, 17, 11, 52, 431, DateTimeKind.Utc).AddTicks(5282),
                             Text = "Зміст заповнюється адміністратором",
                             Title = "Новини"
                         },
@@ -421,7 +416,7 @@ namespace MyCompany.Migrations
                         {
                             Id = new Guid("48a76a45-c59d-4095-84a1-06e6487a137a"),
                             CodeWord = "PageMessages",
-                            DateAdded = new DateTime(2022, 10, 26, 9, 57, 6, 415, DateTimeKind.Utc).AddTicks(7233),
+                            DateAdded = new DateTime(2022, 10, 25, 17, 11, 52, 431, DateTimeKind.Utc).AddTicks(5300),
                             Text = "Зміст заповнюється адміністратором",
                             Title = "Написати адміністратору"
                         });

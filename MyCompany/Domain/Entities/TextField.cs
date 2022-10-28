@@ -9,7 +9,7 @@ namespace MyCompany.Domain.Entities
     public class TextField : EntityBase
     {
         [Required]
-        public string CodeWord { get; set;  }
+        public string CodeWord { get; set; }
 
         [Display(Name = "Назва сторінки (заголовок)")]
         public override string Title { get; set; } = "Інформаційна сторінка";

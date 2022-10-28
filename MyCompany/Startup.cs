@@ -61,10 +61,10 @@ namespace MyCompany
                 x.AddPolicy("AdminArea", policy => { policy.RequireRole("admin"); });
             });
 
-            services.AddControllersWithViews( x=>
-                {
-                    x.Conventions.Add(new AdminAreaAutorization("Admin", "AdminArea"));
-                })
+            services.AddControllersWithViews(x =>
+               {
+                   x.Conventions.Add(new AdminAreaAutorization("Admin", "AdminArea"));
+               })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_3_0).AddSessionStateTempDataProvider();
         }
 
@@ -73,10 +73,10 @@ namespace MyCompany
         {
             if (env.IsDevelopment())
                 app.UseDeveloperExceptionPage();
-            
+
             app.UseStaticFiles();
             app.UseRouting();
-           
+
 
             app.UseCookiePolicy();
             app.UseAuthentication();

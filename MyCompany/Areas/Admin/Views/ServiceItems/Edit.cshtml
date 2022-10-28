@@ -1,5 +1,5 @@
 ﻿@model ServiceItem
-@{ 
+@{
     string strTitle = "Редагувати запис";
     ViewBag.Title = strTitle;
 }
@@ -13,7 +13,6 @@
             <input type="hidden" asp-for="DateAdded" />
             <input type="hidden" asp-for="TitleImagePath" />
 
-            <div asp-validation-summary="All"></div>
             <div class="div-box">
                 <label asp-for="Title"></label>
                 <input asp-for="Title" />
@@ -33,7 +32,7 @@
                 <label asp-for="TitleImagePath"></label>
                 <input type="file" name="titleImageFile" id="titleImageFile" />
                 <div>
-                    <img  style="height:400px;width:600px;" src="~/images/@Model.TitleImagePath" />
+                    <img style="height:400px;width:600px;" src="~/images/@Model.TitleImagePath" />
                 </div>
             </div>
             <div class="div-box">
@@ -51,7 +50,9 @@
                 <input asp-for="MetaKeywords" />
                 <span asp-validation-for="MetaKeywords"></span>
             </div>
-            <input type="submit" value="Зберігти">
+            <button class="btn3">
+                <input style="background:none;border:none;" type="submit" value="Зберігти">
+            </button>
         </form>
     </div>
 </div>

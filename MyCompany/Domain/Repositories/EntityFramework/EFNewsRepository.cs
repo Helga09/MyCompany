@@ -24,14 +24,19 @@ namespace MyCompany.Domain.Repositories.EntityFramework
             context.SaveChanges();
         }
 
-        public IQueryable<News> GetNews()
+        public IQueryable<News> GetNotPublishNews()
         {
-            return context.News;
+            return context.News.Where(x => x.Publish == false);
         }
 
         public News GetNewsById(Guid id)
         {
             return context.News.FirstOrDefault(x => x.Id == id);
+        }
+
+        public IQueryable<News> GetPublishNews()
+        {
+            return context.News.Where(x => x.Publish == true);
         }
 
         public void SaveNews(News entity)
@@ -41,6 +46,11 @@ namespace MyCompany.Domain.Repositories.EntityFramework
             else
                 context.Entry(entity).State = EntityState.Modified;
             context.SaveChanges();
+        }
+
+        public IQueryable<News> GetAllNews()
+        {
+            return context.News;
         }
     }
 }

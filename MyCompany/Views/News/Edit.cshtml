@@ -1,6 +1,6 @@
 ﻿@model News
 @{
-    string strTitle = "Редагувати запис";
+    string strTitle = "Додавання новини";
     ViewBag.Title = strTitle;
 }
 
@@ -8,18 +8,17 @@
 <div>
     <h2>@strTitle</h2>
     <div>
-        <form asp-area="Admin" asp-controller="News" asp-action="Edit" method="post" enctype="multipart/form-data">
+        <form asp-area="" asp-controller="News" asp-action="Edit" method="post" enctype="multipart/form-data">
             <input type="hidden" asp-for="Id" />
-            <input type="hidden" asp-for="Publish" value="true" />
+            <input type="hidden" asp-for="Publish" value="false" />
             <input type="hidden" asp-for="DateAdded" />
             <input type="hidden" asp-for="TitleImagePath" />
 
             <div class="div-box">
                 <label asp-for="Email"></label>
-                <input asp-for="Email" value="@Model.Email" />
+                <input type="email" asp-for="Email" />
                 <span asp-validation-for="Email"></span>
             </div>
-
 
             <div class="div-box">
                 <label asp-for="Title"></label>
@@ -40,7 +39,7 @@
                 <label asp-for="TitleImagePath"></label>
                 <input type="file" name="titleImageFile" id="titleImageFile" />
                 <div>
-                    <img style="height:400px;width:600px;" src="~/images/@Model.TitleImagePath" />
+                    <img src="~/images/@Model.TitleImagePath" />
                 </div>
             </div>
             <div class="div-box">
@@ -58,6 +57,7 @@
                 <input asp-for="MetaKeywords" />
                 <span asp-validation-for="MetaKeywords"></span>
             </div>
+            <br>
             <button class="btn3">
                 <input style="background:none;border:none;" type="submit" value="Зберігти">
             </button>
@@ -74,3 +74,5 @@
         newCKEdit.updateElement();
     }
 </script>
+
+

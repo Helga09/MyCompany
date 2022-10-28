@@ -11,8 +11,8 @@ namespace MyCompany.Domain.Entities
         protected EntityBase() => DateAdded = DateTime.UtcNow;
         [Required]
         public Guid Id { get; set; }
-        
-        [Display(Name ="Назва (заголовок)")]
+
+        [Display(Name = "Назва (заголовок)")]
         public virtual string Title { get; set; }
 
         [Display(Name = "Коротний опис")]
@@ -24,10 +24,10 @@ namespace MyCompany.Domain.Entities
         public virtual string TitleImagePath { get; set; }
 
         [Display(Name = "SEO метатег Title")]
-        public  string MetaTitle { get; set; }
+        public string MetaTitle { get; set; }
 
         [Display(Name = "SEO метатег Description")]
-        public  string MetaDescription { get; set; }
+        public string MetaDescription { get; set; }
 
         [Display(Name = "SEO метатег Keywords")]
         public string MetaKeywords { get; set; }

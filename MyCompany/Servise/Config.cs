@@ -12,5 +12,7 @@ namespace MyCompany.Servise
         public static string CompanyPhone { get; set; }
         public static string CompanyPhoneShort { get; set; }
         public static string CompanyEmail { get; set; }
+        public static string EmailPassword { get; set; }
+
     }
 }

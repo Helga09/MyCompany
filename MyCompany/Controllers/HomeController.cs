@@ -9,7 +9,7 @@ namespace MyCompany.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly DataManager dataManager; 
+        private readonly DataManager dataManager;
         public HomeController(DataManager dataManager)
         {
             this.dataManager = dataManager;

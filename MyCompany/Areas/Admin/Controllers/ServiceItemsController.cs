@@ -28,7 +28,7 @@ namespace MyCompany.Areas.Admin.Controllers
             var entity = id == default ? new ServiceItem() : dataManager.ServiceItems.GetServiceItemById(id);
             return View(entity);
         }
-       [HttpPost]
+        [HttpPost]
         public IActionResult Edit(ServiceItem model, IFormFile titleImageFile)
         {
             if (ModelState.IsValid)
@@ -42,7 +42,7 @@ namespace MyCompany.Areas.Admin.Controllers
                     }
                 }
                 dataManager.ServiceItems.SaveServiceItem(model);
-                return RedirectToAction(nameof(HomeController.Index),nameof(HomeController).CutController());
+                return RedirectToAction(nameof(HomeController.Index), nameof(HomeController).CutController());
             }
             return View(model);
         }

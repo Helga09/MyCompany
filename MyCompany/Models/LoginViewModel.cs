@@ -9,7 +9,7 @@ namespace MyCompany.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name ="Логін")]
+        [Display(Name = "Логін")]
         public string UserName { get; set; }
 
         [Required]

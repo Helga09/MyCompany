@@ -14,7 +14,7 @@ namespace MyCompany.Controllers
 {
     public class MessagesController : Controller
     {
-     
+
         private readonly DataManager dataManager;
         private readonly IWebHostEnvironment hostingEnvironment;
 
@@ -27,17 +27,16 @@ namespace MyCompany.Controllers
         {
             var entity = id == default ? new Messages() : dataManager.Messages.GetMessagesById(id);
             return View(entity);
-            //return View();
         }
 
         [HttpPost]
         public IActionResult Index(Messages model)
         {
             if (ModelState.IsValid)
-            {            
+            {
                 dataManager.Messages.SaveMessages(model);
                 return View("Success");
- 
+
             }
             return View(model);
         }
